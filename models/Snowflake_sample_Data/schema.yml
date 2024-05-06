@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: customer_info
+    database: SNOWFLAKE_SAMPLE_DATA  
+    schema: TPCDS_SF10TCL  
+    tables:
+      - name: CUSTOMER 
+        columns:
+          - name: id
+            description: Primary key of the orders table
+            tests:
+              - unique
+              - not_null
